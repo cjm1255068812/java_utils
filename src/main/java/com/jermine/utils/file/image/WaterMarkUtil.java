@@ -34,8 +34,8 @@ public class WaterMarkUtil {
      * @param fontSize      字体大小
      * @param x             偏移量
      * @param y             偏移量
-     * @param y             透明度
-     * @param y             角度
+     * @param alpha         透明度
+     * @param degree        角度
      * @param color         文字颜色
      * @return void
      * @author jermine
@@ -92,7 +92,7 @@ public class WaterMarkUtil {
             y += textHeight;
             g.setFont(font);
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));
-            // g.rotate(Math.toRadians(degree), x, y);
+            g.rotate(Math.toRadians(degree), x, y);
             g.drawString(waterMarkText.getContent(), x, y);
             g.dispose();
             FileOutputStream out = new FileOutputStream(file.getPath());

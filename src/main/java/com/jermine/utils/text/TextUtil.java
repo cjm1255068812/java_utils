@@ -27,7 +27,13 @@ public class TextUtil {
         FontMetrics fontMetrics = FontDesignMetrics.getMetrics(font);
         return fontMetrics.stringWidth(content);
     }
-
+    /**
+     * @author jermine
+     * @description // 计算文字高度
+     * @date 2021/1/15 14:03
+     * @param font
+     * @return int
+     **/
     public static int calTextHeight(Font font) {
         FontMetrics fontMetrics = FontDesignMetrics.getMetrics(font);
         return fontMetrics.getHeight();
